@@ -1,0 +1,9 @@
+@model IEnumerable<GoalDigger.MVC.Models.PostViewModel>
+
+<ul>
+  @foreach (var item in @Model)
+{
+    <li>@item.Body</li>
+}
+</ul>
+

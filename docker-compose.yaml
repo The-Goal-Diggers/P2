@@ -1,0 +1,25 @@
+networks:
+  goalmine:
+
+services:
+  mvc:
+    build:
+      context: GoalDigger/GoalDigger.MVC
+      dockerfile: ../../.docker/mvc.dockerfile
+    image: abarnard1/mvc
+    ports:
+      - 5000:80
+    networks:
+      - goalmine
+  api:
+    build:
+      context: GoalDigger/GoalDigger.API
+      dockerfile: ../../.docker/api.dockerfile
+    image: abarnard1/api
+    ports:
+      - 4000:80
+    networks:
+      - goalmine
+
+version: "3.7"
+

@@ -1,0 +1,17 @@
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.csprojAssemblyReference.cache
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.AssemblyInfoInputs.cache
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.AssemblyInfo.cs
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/GoalDigger.API.deps.json
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/GoalDigger.API.runtimeconfig.json
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/GoalDigger.API.runtimeconfig.dev.json
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/GoalDigger.API.dll
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/GoalDigger.API.pdb
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.RazorTargetAssemblyInfo.cache
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/staticwebassets/GoalDigger.API.StaticWebAssets.Manifest.cache
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/staticwebassets/GoalDigger.API.StaticWebAssets.xml
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.dll
+/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.pdb
