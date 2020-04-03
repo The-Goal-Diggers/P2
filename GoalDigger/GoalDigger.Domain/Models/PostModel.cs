@@ -1,9 +1,10 @@
 using System;
 
-namespace GoalDigger.API.Models
+namespace GoalDigger.Domain.Models
 {
     public class PostModel
     {
+      public UserModel User { get; set; }
       public string Body { get; set; }
     }
 }

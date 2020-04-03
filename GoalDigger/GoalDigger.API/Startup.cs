@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using GoalDigger.API.GoalDiggerDBContext;
+using GoalDigger.DataStore.Databases;
 using GoalDigger.API.Repositories;
 
 namespace GoalDigger.API
@@ -28,16 +28,19 @@ namespace GoalDigger.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<GoalDiggerContext>(opt =>
+            services.AddDbContext<GoalDiggerDBContext>(opt =>
                opt.UseSqlServer(Configuration.GetConnectionString("main"))); // TODO: fix this to connect to the sql server
-            services.AddSingleton<GoalDiggerRepository>(); // transient vs scoped vs singleton
+            services.AddScoped<PostRepository>(); // transient vs scoped vs singleton
+            services.AddScoped<UserRepository>();
 
             services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, GoalDiggerDBContext goaldigger_context)
         {
+            goaldigger_context.Database.Migrate();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
