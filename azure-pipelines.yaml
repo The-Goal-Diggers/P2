@@ -57,7 +57,7 @@ stages:
               command: login
               containerRegistry: P2_Proj
           - script: |
-              docker image build --file .docker/mvc.dockerfile --tag 114117/mvcproj P2/GoalDigger/GoalDigger.MVC
+              docker image build --file .docker/mvc.dockerfile --tag 114117/mvcproj GoalDigger/GoalDigger.MVC
               docker image push 114117/mvcproj
           - task: Docker@2
             inputs:
@@ -70,7 +70,7 @@ stages:
               command: login
               containerRegistry: P2_Proj
           - script: |
-              docker image build --file .docker/api.dockerfile --tag 114117/apiproj P2/GoalDigger/GoalDigger.API
+              docker image build --file .docker/api.dockerfile --tag 114117/apiproj GoalDigger/GoalDigger.API
               docker image push 114117/apiproj
           - task: Docker@2
             inputs:
