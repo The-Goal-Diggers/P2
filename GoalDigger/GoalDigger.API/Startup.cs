@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using GoalDigger.API.GoalDiggerDBContext;
 
 namespace GoalDigger.API
 {
@@ -25,6 +27,10 @@ namespace GoalDigger.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<GoalDiggerContext>(opt =>
+               opt.UseSqlServer(Configuration.GetConnectionString("main"))); // TODO: fix this to connect to the sql server
+            // services.AddScoped<PizzaBoxRepository>(); // lifetime of the application for all requests
+
             services.AddControllers();
         }
 
@@ -35,13 +41,9 @@ namespace GoalDigger.API
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

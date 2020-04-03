@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj",
+      "projectUniqueName": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj",
       "projectName": "GoalDigger.MVC",
-      "projectPath": "/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj",
+      "projectPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj",
       "packagesPath": "/Users/alexander/.nuget/packages/",
-      "outputPath": "/Users/alexander/Desktop/P2_again/GoalDigger/GoalDigger.MVC/obj/",
+      "outputPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.MVC/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/alexander/.nuget/NuGet/NuGet.Config"
