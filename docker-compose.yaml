@@ -6,7 +6,7 @@ services:
     build:
       context: GoalDigger/GoalDigger.MVC
       dockerfile: ../../.docker/mvc.dockerfile
-    image: abarnard1/mvc
+    image: 114117/mvc
     ports:
       - 5000:80
     networks:
@@ -15,7 +15,7 @@ services:
     build:
       context: GoalDigger/GoalDigger.API
       dockerfile: ../../.docker/api.dockerfile
-    image: abarnard1/api
+    image: 114117/api
     ports:
       - 4000:80
     networks:

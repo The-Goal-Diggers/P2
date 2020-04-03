@@ -1,0 +1,96 @@
+pr:
+  - master
+
+name: $(date:yyyyMMdd)$(rev:.rr)
+
+stages:
+  - stage: build
+    jobs:
+      - job: build_mvc
+        steps:
+          - script: dotnet build P2/GoalDigger/GoalDigger.MVC/*.csproj
+      - job: build_api
+        steps:
+          - script: dotnet build P2/GoalDigger/GoalDigger.API/*.csproj
+
+  - stage: test
+    jobs:
+      - job: test_mvc
+      - job: test_api
+
+  - stage: analyze
+    jobs:
+      - job: analyze_mvc
+        pool:
+          vmImage: ubuntu-18.04
+        steps:
+          - task: DotnetGlobalToolInstaller@0
+            inputs:
+              name: "dotnet-sonarscanner"
+          - script: |
+              dotnet sonarscanner begin /k:"GoalDigger_mvc" /o:"p2project" /d:sonar.host.url="https://sonarcloud.io/" /d:sonar.login=$SONAR_LOGIN
+              dotnet build P2/GoalDigger/*.sln
+              dotnet sonarscanner end /d:sonar.login=$SONAR_LOGIN
+            env:
+              SONAR_LOGIN: $(sonar.login)
+
+      - job: analyze_api
+        pool:
+          vmImage: ubuntu-18.04
+        steps:
+          - task: DotnetGlobalToolInstaller@0
+            inputs:
+              name: "dotnet-sonarscanner"
+          - script: |
+              dotnet sonarscanner begin /k:"GoalDigger_api" /o:"p2project" /d:sonar.host.url="https://sonarcloud.io/" /d:sonar.login=$SONAR_LOGIN
+              dotnet build P2/GoalDigger/*.sln
+              dotnet sonarscanner end /d:sonar.login=$SONAR_LOGIN
+            env:
+              SONAR_LOGIN: $(sonar.login)
+
+  - stage: pack
+    jobs:
+      - job: pack_mvc
+        steps:
+          - task: Docker@2
+            inputs:
+              command: login
+              containerRegistry: P2_Proj
+          - script: |
+              docker image build --file P2/.docker/mvc.dockerfile --tag 114117/mvcproj P2/GoalDigger/GoalDigger.MVC
+              docker image push 114117/mvcproj
+          - task: Docker@2
+            inputs:
+              command: logout
+              containerRegistry: P2_Proj
+      - job: pack_api
+        steps:
+          - task: Docker@2
+            inputs:
+              command: login
+              containerRegistry: P2_Proj
+          - script: |
+              docker image build --file P2/.docker/api.dockerfile --tag 114117/apiproj P2/GoalDigger/GoalDigger.API
+              docker image push 114117/apiproj
+          - task: Docker@2
+            inputs:
+              command: logout
+              containerRegistry: P2_Proj
+
+  # - stage: deploy
+  #   jobs:
+  #     - job: deploy_app
+  #       steps:
+  #         - task: DockerCompose@0
+  #           displayName: Run services
+  #           inputs:
+  #             action: Run services
+  #             azureSubscriptionEndpoint: $(azure.subscription)
+  #             containerRegistryType: Container Registry
+  #             dockerComposeFile: docker-compose.yaml
+  #             projectName: $(Build.Repository.Name)
+  #             buildImages: false
+  #             detached: false
+
+trigger:
+  - master
