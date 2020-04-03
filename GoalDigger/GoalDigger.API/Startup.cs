@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using GoalDigger.API.GoalDiggerDBContext;
+using GoalDigger.API.Repositories;
 
 namespace GoalDigger.API
 {
@@ -29,7 +30,7 @@ namespace GoalDigger.API
         {
             services.AddDbContext<GoalDiggerContext>(opt =>
                opt.UseSqlServer(Configuration.GetConnectionString("main"))); // TODO: fix this to connect to the sql server
-            // services.AddScoped<PizzaBoxRepository>(); // lifetime of the application for all requests
+            services.AddSingleton<GoalDiggerRepository>(); // transient vs scoped vs singleton
 
             services.AddControllers();
         }
