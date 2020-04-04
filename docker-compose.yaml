@@ -23,7 +23,7 @@ services:
     depends_on:
       - db
     environment:
-      ConnectionStrings__main: "server=sql;database=GoalDiggerDB;user id=sa;password=Password12345"
+      ConnectionStrings__main: "server=db;database=GoalDiggerDB;user id=sa;password=Password12345"
   db:
     image: "mcr.microsoft.com/mssql/server:2017-latest"
     ports:
