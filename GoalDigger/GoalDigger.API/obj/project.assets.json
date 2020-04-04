@@ -1280,30 +1280,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "GoalDigger.DataStore/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "GoalDigger.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3"
-        },
-        "compile": {
-          "bin/placeholder/GoalDigger.DataStore.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GoalDigger.DataStore.dll": {}
-        }
-      },
-      "GoalDigger.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/GoalDigger.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GoalDigger.Domain.dll": {}
-        }
       }
     }
   },
@@ -5010,22 +4986,10 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
-    },
-    "GoalDigger.DataStore/1.0.0": {
-      "type": "project",
-      "path": "../GoalDigger.DataStore/GoalDigger.DataStore.csproj",
-      "msbuildProject": "../GoalDigger.DataStore/GoalDigger.DataStore.csproj"
-    },
-    "GoalDigger.Domain/1.0.0": {
-      "type": "project",
-      "path": "../GoalDigger.Domain/GoalDigger.Domain.csproj",
-      "msbuildProject": "../GoalDigger.Domain/GoalDigger.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "GoalDigger.DataStore >= 1.0.0",
-      "GoalDigger.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.3",
@@ -5038,11 +5002,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
+      "projectUniqueName": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
       "projectName": "GoalDigger.API",
-      "projectPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
+      "projectPath": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
       "packagesPath": "/Users/alexander/.nuget/packages/",
-      "outputPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/obj/",
+      "outputPath": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/alexander/.nuget/NuGet/NuGet.Config"
@@ -5055,14 +5019,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {
-            "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.DataStore/GoalDigger.DataStore.csproj": {
-              "projectPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.DataStore/GoalDigger.DataStore.csproj"
-            },
-            "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.Domain/GoalDigger.Domain.csproj": {
-              "projectPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.Domain/GoalDigger.Domain.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
