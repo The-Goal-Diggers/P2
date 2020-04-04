@@ -20,8 +20,15 @@ services:
       - 4000:80
     networks:
       - goalmine
+<<<<<<< HEAD
     depends_on: 
       db
+=======
+    depends_on:
+      - db
+    environment:
+      ConnectionStrings__main: "server=sql;database=GoalDiggerDB;user id=sa;password=Password12345"
+>>>>>>> alex
   db:
     image: "mcr.microsoft.com/mssql/server:2017-latest"
     ports:

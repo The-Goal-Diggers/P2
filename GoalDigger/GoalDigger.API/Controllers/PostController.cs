@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using GoalDigger.API.Models;
+using GoalDigger.Domain.Models;
 
 namespace GoalDigger.API.Controllers
 {
