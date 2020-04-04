@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj": {}
-  },
-  "projects": {
-    "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj",
-        "projectName": "GoalDigger.MVC",
-        "projectPath": "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj",
-        "packagesPath": "/home/dummer-isaiah/.nuget/packages/",
-        "outputPath": "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.MVC/obj/",
-=======
     "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj": {}
   },
   "projects": {
@@ -25,10 +12,9 @@
         "projectPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.MVC/GoalDigger.MVC.csproj",
         "packagesPath": "/Users/alexander/.nuget/packages/",
         "outputPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.MVC/obj/",
->>>>>>> alex
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/dummer-isaiah/.nuget/NuGet/NuGet.Config"
+          "/Users/alexander/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -79,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

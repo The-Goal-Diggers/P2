@@ -6,7 +6,7 @@ services:
     build:
       context: GoalDigger/GoalDigger.MVC
       dockerfile: ../../.docker/mvc.dockerfile
-    image: 114117/mvc
+    image: abarnard1/mvc
     ports:
       - 5000:80
     networks:
@@ -15,20 +15,15 @@ services:
     build:
       context: GoalDigger/GoalDigger.API
       dockerfile: ../../.docker/api.dockerfile
-    image: 114117/api
+    image: abarnard1/api
     ports:
       - 4000:80
     networks:
       - goalmine
-<<<<<<< HEAD
-    depends_on: 
-      db
-=======
     depends_on:
       - db
     environment:
       ConnectionStrings__main: "server=sql;database=GoalDiggerDB;user id=sa;password=Password12345"
->>>>>>> alex
   db:
     image: "mcr.microsoft.com/mssql/server:2017-latest"
     ports:

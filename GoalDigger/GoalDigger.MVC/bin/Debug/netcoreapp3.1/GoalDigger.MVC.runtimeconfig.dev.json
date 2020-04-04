@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/dummer-isaiah/.dotnet/store/|arch|/|tfm|",
-      "/home/dummer-isaiah/.nuget/packages"
+      "/Users/alexander/.dotnet/store/|arch|/|tfm|",
+      "/Users/alexander/.nuget/packages"
     ]
   }
 }
