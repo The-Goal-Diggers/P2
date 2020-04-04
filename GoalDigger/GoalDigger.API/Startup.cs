@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using GoalDigger.DataStore.Databases;
-using GoalDigger.API.Repositories;
+using GoalDigger.DataStore.Repositories;
 
 namespace GoalDigger.API
 {

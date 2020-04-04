@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using GoalDigger.Domain.Models;
 
-namespace GoalDigger.Datastore.Databases
+namespace GoalDigger.DataStore.Databases
 {
     public class GoalDiggerDBContext : DbContext
     {
@@ -16,9 +16,12 @@ namespace GoalDigger.Datastore.Databases
 
         protected override void OnModelCreating(ModelBuilder builder) 
         {
-            builder.Entity<PostModel>().HasKey(u => u.UserId);
+            // Set keys
+            builder.Entity<PostModel>().HasKey(x => x.uid);
+            builder.Entity<UserModel>().HasKey(x => x.uid);
 
-            // builder.Entity<User>().HasMany(u => u.Orders).WithOne(o => o.User);
+            // Define entity relationships
+            builder.Entity<UserModel>().HasMany(x => x.Posts).WithOne(x => x.User);
 
         }
 
@@ -26,6 +29,8 @@ namespace GoalDigger.Datastore.Databases
         // {
         //     new User() { UserId = 1, Name = "Bianca", Password = "bianca", Address = "Central 960"},
         // });
+
+    }
 }
 
 

@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 // using GoalDigger.Domain.Interfaces;
 using GoalDigger.Domain.Models;
-using GoalDigger.Datastore.Databases;
+using GoalDigger.DataStore.Databases;
 
 namespace GoalDigger.DataStore.Repositories 
 {
