@@ -20,8 +20,8 @@ services:
       - 4000:80
     networks:
       - goalmine
-    depends_on:
-      - db
+    environment: 
+      ConnectionStrings__<fillinlater>="server=db"
   db:
     image: "mcr.microsoft.com/mssql/server:2017-latest"
     ports:
