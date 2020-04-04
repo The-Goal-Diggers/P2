@@ -137,6 +137,18 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/3.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "3.1.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/3.1.3": {
         "type": "package",
         "dependencies": {
@@ -1268,6 +1280,30 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "GoalDigger.DataStore/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "GoalDigger.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3"
+        },
+        "compile": {
+          "bin/placeholder/GoalDigger.DataStore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GoalDigger.DataStore.dll": {}
+        }
+      },
+      "GoalDigger.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/GoalDigger.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GoalDigger.Domain.dll": {}
+        }
       }
     }
   },
@@ -1519,6 +1555,30 @@
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "microsoft.entityframeworkcore.sqlserver.3.1.3.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/3.1.3": {
+      "sha512": "/VSHVXwg8Zu5gJILvcEIVjmpQbuUg6+SEwU6pFa/RtXMPD+QSgAuzRYIfDbeVHjJuQxK3nRwkTFxorO254BLLw==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/3.1.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/_._",
+        "microsoft.entityframeworkcore.tools.3.1.3.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/3.1.3": {
@@ -4950,12 +5010,26 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "GoalDigger.DataStore/1.0.0": {
+      "type": "project",
+      "path": "../GoalDigger.DataStore/GoalDigger.DataStore.csproj",
+      "msbuildProject": "../GoalDigger.DataStore/GoalDigger.DataStore.csproj"
+    },
+    "GoalDigger.Domain/1.0.0": {
+      "type": "project",
+      "path": "../GoalDigger.Domain/GoalDigger.Domain.csproj",
+      "msbuildProject": "../GoalDigger.Domain/GoalDigger.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "GoalDigger.DataStore >= 1.0.0",
+      "GoalDigger.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.3",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3",
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.3",
+      "Microsoft.Extensions.DependencyInjection >= 3.1.3"
     ]
   },
   "packageFolders": {
@@ -4981,7 +5055,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.DataStore/GoalDigger.DataStore.csproj": {
+              "projectPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.DataStore/GoalDigger.DataStore.csproj"
+            },
+            "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.Domain/GoalDigger.Domain.csproj": {
+              "projectPath": "/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.Domain/GoalDigger.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5000,6 +5081,16 @@
             "version": "[3.1.3, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[3.1.3, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.1.3, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[3.1.3, )"
           }

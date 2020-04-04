@@ -23,12 +23,11 @@ namespace GoalDigger.DataStore.Repositories
 			return _db.Posts.ToList();
     }
 
-    // public List<PostModel> Read(Store store)
-    // {
-    //   List<PostModel> list = (_db.Posts.Where(o => o.StoreId == store.StoreId).ToList());
-      
-    //   return list;
-    // }
+    public List<PostModel> Read(UserModel user)
+    {
+      List<PostModel> list = (_db.Posts.Where(x => x.User.uid == user.uid).ToList());
+      return list;
+    }
 
     // public List<Order> Get(User user)
     // {

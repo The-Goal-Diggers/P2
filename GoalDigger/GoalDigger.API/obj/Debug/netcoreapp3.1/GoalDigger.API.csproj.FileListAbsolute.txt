@@ -64,3 +64,7 @@
 /Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/staticwebassets/GoalDigger.API.StaticWebAssets.xml
 /Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.dll
 /Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.pdb
+/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/GoalDigger.DataStore.dll
+/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/GoalDigger.Domain.dll
+/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/GoalDigger.DataStore.pdb
+/Users/alexander/Desktop/P2/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/GoalDigger.Domain.pdb

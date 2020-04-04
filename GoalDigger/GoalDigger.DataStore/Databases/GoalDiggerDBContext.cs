@@ -5,14 +5,12 @@ namespace GoalDigger.DataStore.Databases
 {
     public class GoalDiggerDBContext : DbContext
     {
-        // public DbSet<Pizza> Pizza { get; set; }
         public DbSet<PostModel> Posts { get; set; }
         public DbSet<UserModel> Users { get; set; }
-        // public DbSet<User> User { get; set; }
+
         public GoalDiggerDBContext(DbContextOptions<GoalDiggerDBContext> options)
             : base(options) {}
 
-        
 
         protected override void OnModelCreating(ModelBuilder builder) 
         {
@@ -23,12 +21,15 @@ namespace GoalDigger.DataStore.Databases
             // Define entity relationships
             builder.Entity<UserModel>().HasMany(x => x.Posts).WithOne(x => x.User);
 
+            // Input dummy data
+            builder.Entity<UserModel>().HasData(new UserModel[]
+            {
+                new UserModel() { UserName = "Alex1234" },
+            });
+
         }
 
-        // builder.Entity<User>().HasData(new User[]
-        // {
-        //     new User() { UserId = 1, Name = "Bianca", Password = "bianca", Address = "Central 960"},
-        // });
+        
 
     }
 }

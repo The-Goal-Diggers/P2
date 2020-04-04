@@ -12,10 +12,10 @@ namespace GoalDigger.Domain.Models
       private static long uid_state = 0;
 
       public UserModel()
-    {
-      uid_state ++;
-      uid = uid_state;
-    }
+      {
+        uid_state ++;
+        uid = uid_state;
+      }
 
     }
 }
