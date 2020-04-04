@@ -4997,19 +4997,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/alexander/.nuget/packages/": {}
+    "/home/alexander/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
+      "projectUniqueName": "/home/alexander/Debug/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
       "projectName": "GoalDigger.API",
-      "projectPath": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
-      "packagesPath": "/Users/alexander/.nuget/packages/",
-      "outputPath": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/obj/",
+      "projectPath": "/home/alexander/Debug/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
+      "packagesPath": "/home/alexander/.nuget/packages/",
+      "outputPath": "/home/alexander/Debug/P2/GoalDigger/GoalDigger.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/alexander/.nuget/NuGet/NuGet.Config"
+        "/home/alexander/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5070,7 +5070,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
       }
     }
   }
