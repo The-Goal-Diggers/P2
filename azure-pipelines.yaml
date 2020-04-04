@@ -1,5 +1,5 @@
 pr:
-  - master
+  - isaiah
 
 name: $(date:yyyyMMdd)$(rev:.rr)
 
@@ -93,4 +93,4 @@ stages:
               detached: false
 
 trigger:
-  - master
+  - isaiah
