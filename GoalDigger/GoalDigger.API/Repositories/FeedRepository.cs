@@ -24,7 +24,8 @@ namespace GoalDigger.DataStore.Repositories
     }
     public FeedModel Read(UserModel user) 
     {
-			return _db.Feeds.Where(x => x.User.uid == user.uid).ToList();
+			// return _db.Feeds.Where(x => x.User.uid == user.uid);
+      return _db.Feeds.SingleOrDefault(x => x.User.uid == user.uid);
     }
 
     // public List<Order> Get(User user)

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/alexander/Debug/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {}
+    "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {}
   },
   "projects": {
-    "/home/alexander/Debug/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {
+    "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alexander/Debug/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
+        "projectUniqueName": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
         "projectName": "GoalDigger.API",
-        "projectPath": "/home/alexander/Debug/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
-        "packagesPath": "/home/alexander/.nuget/packages/",
-        "outputPath": "/home/alexander/Debug/P2/GoalDigger/GoalDigger.API/obj/",
+        "projectPath": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
+        "packagesPath": "/Users/alexander/.nuget/packages/",
+        "outputPath": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/alexander/.nuget/NuGet/NuGet.Config"
+          "/Users/alexander/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -55,6 +55,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[3.1.3, )"
+            },
+            "newtonsoft.json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [
@@ -75,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

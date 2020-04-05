@@ -23,7 +23,7 @@ namespace GoalDigger.DataStore.Repositories
 			return _db.Goals.ToList();
     }
 
-    public List<GoalModel> Read(User user)
+    public List<GoalModel> Read(UserModel user)
     {
       List<GoalModel> list = (_db.Goals.Where(x => x.User.uid == user.uid).ToList());
       return list;

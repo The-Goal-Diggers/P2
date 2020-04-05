@@ -172,3 +172,4 @@
 /home/alexander/Debug/P2/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.dll
 /home/alexander/Debug/P2/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.pdb
 /home/alexander/Debug/P2/GoalDigger/GoalDigger.API/obj/Debug/netcoreapp3.1/GoalDigger.API.genruntimeconfig.cache
+/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll

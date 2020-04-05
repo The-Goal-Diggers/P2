@@ -18,7 +18,7 @@ namespace GoalDigger.DataStore.Repositories
       _db = dbContext;
     }
 
-    public List<UserModel> Read() 
+    public List<FeedPostModel> Read() 
     {
 			return _db.FeedPosts.ToList();
     }
