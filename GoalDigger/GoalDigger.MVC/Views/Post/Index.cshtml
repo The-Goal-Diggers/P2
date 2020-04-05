@@ -1,9 +1,11 @@
 @model IEnumerable<GoalDigger.MVC.Models.PostViewModel>
 
 <ul>
-  @foreach (var item in @Model)
+  @foreach (var item in @Model.Reverse())
 {
     <li>@item.Body</li>
 }
 </ul>
+
+<a href="/post/makepost/">Make a new Post</a>
 
