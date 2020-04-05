@@ -89,7 +89,7 @@ stages:
               containerRegistryType: Container Registry
               dockerComposeFile: docker-compose.yaml
               projectName: $(Build.Repository.Name)
-              buildImages: true
+              buildImages: false
               detached: false
 
 trigger:
