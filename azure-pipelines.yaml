@@ -87,6 +87,7 @@ stages:
               action: Run services
               azureSubscriptionEndpoint: P2_Project
               containerRegistryType: Container Registry
+              azureContainerRegistry: $(azureContainerRegistry)
               dockerComposeFile: docker-compose.yaml
               projectName: $(Build.Repository.Name)
               buildImages: false

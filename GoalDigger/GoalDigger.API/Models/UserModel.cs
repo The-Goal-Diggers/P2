@@ -6,8 +6,14 @@ namespace GoalDigger.Domain.Models
 {
     public class UserModel : AModel
     {
-      public string UserName { get; set; }
+      // Entity relationships
+      public List<GoalModel> Goals { get; set; }
       public List<PostModel> Posts { get; set; }
+      public MentionModel Mention { get; set; }
+      public FeedModel Feed { get; set; }
+
+      // Class variables
+      public string UserName { get; set; }
 
       private static long uid_state = 0;
 
