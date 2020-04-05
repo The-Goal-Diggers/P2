@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using GoalDigger.API.Models;
-using Newtonsoft.Json;
+using GoalDigger.Domain.Models;
+// using Newtonsoft.Json;
 using System.Net.Http;
 
 namespace GoalDigger.API.Controllers

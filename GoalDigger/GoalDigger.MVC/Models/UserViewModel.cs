@@ -2,7 +2,7 @@
 
 namespace GoalDigger.MVC.Models
 {
-    public class PostViewModel
+    public class UserViewModel
     {
       public string Body { get; set; }
     }

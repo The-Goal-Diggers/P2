@@ -20536,6 +20536,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.MVC/Views/Post/MakePost.cshtml",
+      "TargetPath": "Views\\Post\\MakePost.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.MVC/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
