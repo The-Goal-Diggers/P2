@@ -5,32 +5,22 @@ using Microsoft.EntityFrameworkCore;
 // using GoalDigger.Domain.Interfaces;
 using GoalDigger.Domain.Models;
 using GoalDigger.DataStore.Databases;
-using GoalDigger.Domain.Abstracts;
 
 namespace GoalDigger.DataStore.Repositories 
 {
-  public class UserRepository : ARepository
+  public class UserRepository
   {
-    public UserRepository(){}
+
+    private GoalDiggerDBContext _db;
+    
+    public UserRepository(GoalDiggerDBContext dbContext)
+    {
+      _db = dbContext;
+    }
 
     public List<UserModel> Read() 
     {
 			return _db.Users.ToList();
-    }
-    public UserModel Read(long uid)
-    {
-      return _db.Users.SingleOrDefault(x => x.uid == uid);
-    }
-    public bool Create(UserModel model) // add a new record to the DBMS
-    {
-      _db.Users.Update(model);
-      return _db.SaveChanges() == 1;
-    }
-    public bool Update(UserModel model) // update an existing record
-    {
-      UserModel x = Read(model.uid);
-      x = model;
-      return _db.SaveChanges() == 1;
     }
 
     // public List<Order> Get(User user)
