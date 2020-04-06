@@ -24,8 +24,7 @@ namespace GoalDigger.DataStore.Repositories
     }
     public FeedPostModel Read(long uid)
     {
-      FeedPostModel model = (_db.FeedPosts.Where(x => x.uid == uid));
-      return model;
+      return _db.FeedPosts.SingleOrDefault(x => x.uid == uid);
     }
 
     public bool Create(FeedPostModel model) // add a new record to the DBMS

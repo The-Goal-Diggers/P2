@@ -4,16 +4,13 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 // using GoalDigger.Domain.Interfaces;
 using GoalDigger.Domain.Models;
-using GoalDigger.DataStore.Databases;
+
 using GoalDigger.Domain.Abstracts;
 
 namespace GoalDigger.DataStore.Repositories 
 {
   public class PostRepository : ARepository
-  {
-
-    private GoalDiggerDBContext _db;
-    
+  {    
     public PostRepository()
     {
       // _db = dbContext;
@@ -25,22 +22,21 @@ namespace GoalDigger.DataStore.Repositories
     }
     public PostModel Read(long uid)
     {
-      PostModel user = (_db.Posts.Where(x => x.uid == uid));
-      return user;
+      return _db.Posts.SingleOrDefault(x => x.uid == uid);
     }
     public List<PostModel> Read(UserModel user)
     {
       List<PostModel> list = (_db.Posts.Where(x => x.User.uid == user.uid).ToList());
       return list;
     }
-    public bool Create(FeedPostModel model) // add a new record to the DBMS
+    public bool Create(PostModel model) // add a new record to the DBMS
     {
-      _db.FeedPostModel.Update(model);
+      _db.Posts.Update(model);
       return _db.SaveChanges() == 1;
     }
-    public bool Update(FeedPostModel model) // update an existing record
+    public bool Update(PostModel model) // update an existing record
     {
-      FeedPostModel x = Read(model.uid);
+      PostModel x = Read(model.uid);
       x = model;
       return _db.SaveChanges() == 1;
     }

@@ -24,8 +24,7 @@ namespace GoalDigger.DataStore.Repositories
     }
     public HashtagModel Read(long uid)
     {
-      HashtagModel model = (_db.Hashtags.Where(x => x.uid == uid));
-      return model;
+      return _db.Hashtags.SingleOrDefault(x => x.uid == uid);
     }
     public bool Create(HashtagModel model) // add a new record to the DBMS
     {
@@ -34,7 +33,7 @@ namespace GoalDigger.DataStore.Repositories
     }
     public bool Update(HashtagModel model) // update an existing record
     {
-      FeedPostModel x = Read(model.uid);
+      HashtagModel x = Read(model.uid);
       x = model;
       return _db.SaveChanges() == 1;
     }

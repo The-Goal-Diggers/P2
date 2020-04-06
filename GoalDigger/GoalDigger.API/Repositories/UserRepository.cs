@@ -24,8 +24,7 @@ namespace GoalDigger.DataStore.Repositories
     }
     public UserModel Read(long uid)
     {
-      UserModel user = (_db.Users.Where(x => x.uid == uid));
-      return user;
+      return _db.Users.SingleOrDefault(x => x.uid == uid);
     }
     public bool Create(UserModel model) // add a new record to the DBMS
     {

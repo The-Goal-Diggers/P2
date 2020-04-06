@@ -24,22 +24,20 @@ namespace GoalDigger.DataStore.Repositories
     }
     public FeedModel Read(long uid)
     {
-      FeedModel model = (_db.Feeds.Where(x => x.uid == uid));
-      return model;
+      return _db.Feeds.SingleOrDefault(x => x.uid == uid);
     }
-    public FeedModel Read(UserModel user) 
+    public FeedModel Read(UserModel user)  // get a user's feed
     {
-			// return _db.Feeds.Where(x => x.User.uid == user.uid);
       return _db.Feeds.SingleOrDefault(x => x.User.uid == user.uid);
     }
-    public bool Create(FeedPostModel model) // add a new record to the DBMS
+    public bool Create(FeedModel model) // add a new record to the DBMS
     {
-      _db.FeedPostModel.Update(model);
+      _db.Feeds.Update(model);
       return _db.SaveChanges() == 1;
     }
-    public bool Update(FeedPostModel model) // update an existing record
+    public bool Update(FeedModel model) // update an existing record
     {
-      FeedPostModel x = Read(model.uid);
+      FeedModel x = Read(model.uid);
       x = model;
       return _db.SaveChanges() == 1;
     }

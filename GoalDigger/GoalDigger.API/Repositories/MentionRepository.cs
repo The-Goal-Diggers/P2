@@ -24,17 +24,16 @@ namespace GoalDigger.DataStore.Repositories
     }
     public MentionModel Read(long uid)
     {
-      MentionModel model = (_db.Mentions.Where(x => x.uid == uid));
-      return model;
+      return _db.Mentions.SingleOrDefault(x => x.uid == uid);
     }
-    public bool Create(FeedPostModel model) // add a new record to the DBMS
+    public bool Create(MentionModel model) // add a new record to the DBMS
     {
-      _db.FeedPostModel.Update(model);
+      _db.Mentions.Update(model);
       return _db.SaveChanges() == 1;
     }
-    public bool Update(FeedPostModel model) // update an existing record
+    public bool Update(MentionModel model) // update an existing record
     {
-      FeedPostModel x = Read(model.uid);
+      MentionModel x = Read(model.uid);
       x = model;
       return _db.SaveChanges() == 1;
     }

@@ -24,23 +24,22 @@ namespace GoalDigger.DataStore.Repositories
     }
     public GoalModel Read(long uid)
     {
-      GoalModel model = (_db.Goals.Where(x => x.uid == uid));
-      return model;
+      return _db.Goals.SingleOrDefault(x => x.uid == uid);
     }
 
-    public List<GoalModel> Read(UserModel user)
+    public List<GoalModel> Read(UserModel user) // get a user's goals
     {
       List<GoalModel> list = (_db.Goals.Where(x => x.User.uid == user.uid).ToList());
       return list;
     }
-    public bool Create(FeedPostModel model) // add a new record to the DBMS
+    public bool Create(GoalModel model) // add a new record to the DBMS
     {
-      _db.FeedPostModel.Update(model);
+      _db.Goals.Update(model);
       return _db.SaveChanges() == 1;
     }
-    public bool Update(FeedPostModel model) // update an existing record
+    public bool Update(GoalModel model) // update an existing record
     {
-      FeedPostModel x = Read(model.uid);
+      GoalModel x = Read(model.uid);
       x = model;
       return _db.SaveChanges() == 1;
     }

@@ -24,17 +24,16 @@ namespace GoalDigger.DataStore.Repositories
     }
     public HashtagPostModel Read(long uid)
     {
-      HashtagPostModel model = (_db.HashtagPosts.Where(x => x.uid == uid));
-      return model;
+      return _db.HashtagPosts.SingleOrDefault(x => x.uid == uid);
     }
-    public bool Create(FeedPostModel model) // add a new record to the DBMS
+    public bool Create(HashtagPostModel model) // add a new record to the DBMS
     {
-      _db.FeedPostModel.Update(model);
+      _db.HashtagPosts.Update(model);
       return _db.SaveChanges() == 1;
     }
-    public bool Update(FeedPostModel model) // update an existing record
+    public bool Update(HashtagPostModel model) // update an existing record
     {
-      FeedPostModel x = Read(model.uid);
+      HashtagPostModel x = Read(model.uid);
       x = model;
       return _db.SaveChanges() == 1;
     }
