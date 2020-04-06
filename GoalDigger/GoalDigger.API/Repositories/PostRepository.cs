@@ -5,28 +5,44 @@ using Microsoft.EntityFrameworkCore;
 // using GoalDigger.Domain.Interfaces;
 using GoalDigger.Domain.Models;
 using GoalDigger.DataStore.Databases;
+using GoalDigger.Domain.Abstracts;
 
 namespace GoalDigger.DataStore.Repositories 
 {
-  public class PostRepository
+  public class PostRepository : ARepository
   {
 
     private GoalDiggerDBContext _db;
     
-    public PostRepository(GoalDiggerDBContext dbContext)
+    public PostRepository()
     {
-      _db = dbContext;
+      // _db = dbContext;
     }
 
     public List<PostModel> Read() 
     {
 			return _db.Posts.ToList();
     }
-
+    public PostModel Read(long uid)
+    {
+      PostModel user = (_db.Posts.Where(x => x.uid == uid));
+      return user;
+    }
     public List<PostModel> Read(UserModel user)
     {
       List<PostModel> list = (_db.Posts.Where(x => x.User.uid == user.uid).ToList());
       return list;
+    }
+    public bool Create(FeedPostModel model) // add a new record to the DBMS
+    {
+      _db.FeedPostModel.Update(model);
+      return _db.SaveChanges() == 1;
+    }
+    public bool Update(FeedPostModel model) // update an existing record
+    {
+      FeedPostModel x = Read(model.uid);
+      x = model;
+      return _db.SaveChanges() == 1;
     }
 
     // public List<Order> Get(User user)

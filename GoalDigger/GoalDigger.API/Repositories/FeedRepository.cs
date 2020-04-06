@@ -22,10 +22,26 @@ namespace GoalDigger.DataStore.Repositories
     {
 			return _db.Feeds.ToList();
     }
+    public FeedModel Read(long uid)
+    {
+      FeedModel model = (_db.Feeds.Where(x => x.uid == uid));
+      return model;
+    }
     public FeedModel Read(UserModel user) 
     {
 			// return _db.Feeds.Where(x => x.User.uid == user.uid);
       return _db.Feeds.SingleOrDefault(x => x.User.uid == user.uid);
+    }
+    public bool Create(FeedPostModel model) // add a new record to the DBMS
+    {
+      _db.FeedPostModel.Update(model);
+      return _db.SaveChanges() == 1;
+    }
+    public bool Update(FeedPostModel model) // update an existing record
+    {
+      FeedPostModel x = Read(model.uid);
+      x = model;
+      return _db.SaveChanges() == 1;
     }
 
     // public List<Order> Get(User user)

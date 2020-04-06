@@ -22,6 +22,22 @@ namespace GoalDigger.DataStore.Repositories
     {
 			return _db.Hashtags.ToList();
     }
+    public HashtagModel Read(long uid)
+    {
+      HashtagModel model = (_db.Hashtags.Where(x => x.uid == uid));
+      return model;
+    }
+    public bool Create(HashtagModel model) // add a new record to the DBMS
+    {
+      _db.Hashtags.Update(model);
+      return _db.SaveChanges() == 1;
+    }
+    public bool Update(HashtagModel model) // update an existing record
+    {
+      FeedPostModel x = Read(model.uid);
+      x = model;
+      return _db.SaveChanges() == 1;
+    }
 
     // public List<HashtagModel> Get(PostModel post) // get all the hashtags contained in a particular post
     // {

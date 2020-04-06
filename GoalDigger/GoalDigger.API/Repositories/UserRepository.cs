@@ -22,6 +22,22 @@ namespace GoalDigger.DataStore.Repositories
     {
 			return _db.Users.ToList();
     }
+    public UserModel Read(long uid)
+    {
+      UserModel user = (_db.Users.Where(x => x.uid == uid));
+      return user;
+    }
+    public bool Create(UserModel model) // add a new record to the DBMS
+    {
+      _db.Users.Update(model);
+      return _db.SaveChanges() == 1;
+    }
+    public bool Update(UserModel model) // update an existing record
+    {
+      UserModel x = Read(model.uid);
+      x = model;
+      return _db.SaveChanges() == 1;
+    }
 
     // public List<Order> Get(User user)
     // {

@@ -13,8 +13,8 @@ namespace GoalDigger.DataStore.Databases
         public DbSet<MentionModel> Mentions { get; set; }
         public DbSet<HashtagPostModel> HashtagPosts { get; set; }
         public DbSet<HashtagModel> Hashtags { get; set; }
-        public GoalDiggerDBContext(DbContextOptions<GoalDiggerDBContext> options)
-            : base(options) {}
+        public GoalDiggerDBContext(/*DbContextOptions<GoalDiggerDBContext> options*/){}
+            // : base(options) {}
 
 
         protected override void OnModelCreating(ModelBuilder builder) 
