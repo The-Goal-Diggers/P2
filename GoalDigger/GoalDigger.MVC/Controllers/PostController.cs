@@ -23,7 +23,7 @@ namespace GoalDigger.MVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult GetPosts()
         {
           try
           {
