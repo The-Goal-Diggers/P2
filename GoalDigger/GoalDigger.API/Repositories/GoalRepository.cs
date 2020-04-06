@@ -5,10 +5,11 @@ using Microsoft.EntityFrameworkCore;
 // using GoalDigger.Domain.Interfaces;
 using GoalDigger.Domain.Models;
 using GoalDigger.DataStore.Databases;
+using GoalDigger.Domain.Abstracts;
 
 namespace GoalDigger.DataStore.Repositories 
 {
-  public class GoalRepository
+  public class GoalRepository : ARepository
   {
     public GoalRepository(){}
 

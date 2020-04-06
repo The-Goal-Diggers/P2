@@ -47,6 +47,11 @@ namespace GoalDigger.DataStore.Databases
             {
                 new UserModel() { UserName = "Alex1234" },
             });
+            builder.Entity<PostModel>().HasData(new PostModel[]
+            {
+                new PostModel() { Body = "My first #goal !!!" },
+                new PostModel() { Body = "My second #goal !!!" },
+            });
 
         }
 
