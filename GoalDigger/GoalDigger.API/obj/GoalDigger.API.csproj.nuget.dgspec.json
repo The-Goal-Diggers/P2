@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {}
+    "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {}
   },
   "projects": {
-    "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {
+    "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
+        "projectUniqueName": "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
         "projectName": "GoalDigger.API",
-        "projectPath": "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
-        "packagesPath": "/home/dummer-isaiah/.nuget/packages/",
-        "outputPath": "/home/dummer-isaiah/revature_projects/p2/P2/GoalDigger/GoalDigger.API/obj/",
+        "projectPath": "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
+        "packagesPath": "/home/nick/.nuget/packages/",
+        "outputPath": "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/dummer-isaiah/.nuget/NuGet/NuGet.Config"
+          "/home/nick/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -36,6 +36,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Analyzers": {
+              "target": "Package",
+              "version": "(, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
