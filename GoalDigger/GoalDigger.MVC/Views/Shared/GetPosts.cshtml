@@ -1,11 +1,23 @@
 @model IEnumerable<GoalDigger.MVC.Models.PostViewModel>
 
-<ul>
-  @foreach (var item in @Model.Reverse())
-{
-    <li>@item.Body</li>
-}
-</ul>
-
-<a href="/post/makepost/">Make a new Post</a>
+<div class = "container">
+  <div class="row">
+    <div class="col-sm">
+      <a href="/post/makepost/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Make a new Post</a>
+    </div>
+    <div class="col-sm">
+     @foreach (var item in @Model.Reverse())
+     {
+    <div class="card border-light mb-3" style="max-width: 20rem;">
+     <div class="card-header">Post</div>
+      <div class="card-body">
+      @*<h5 class="card-title">Post</h5>*@
+      <p class="card-text">@item.Body</p>
+      </div>
+    </div>
+     }
+    </div>
+    <div class="col-sm">
+     
+    </div>
 
