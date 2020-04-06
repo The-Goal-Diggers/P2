@@ -31,8 +31,8 @@ services:
       ACCEPT_EULA: "Y"
     networks:
       - goalmine
-#    ports:
-#      - 1433:1433
+    ports:
+      - 1433:1433
 
 version: "3.7"
 

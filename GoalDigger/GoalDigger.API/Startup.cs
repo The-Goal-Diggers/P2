@@ -11,8 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 // using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using GoalDigger.DataStore.Databases;
-using GoalDigger.DataStore.Repositories;
+//using GoalDigger.DataStore.Databases;
+//using GoalDigger.DataStore.Repositories;
 
 namespace GoalDigger.API
 {

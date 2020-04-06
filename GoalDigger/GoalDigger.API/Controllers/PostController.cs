@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using GoalDigger.Domain.Models;
 // using Newtonsoft.Json;
 using System.Net.Http;
-using GoalDigger.DataStore.Repositories;
+//using GoalDigger.DataStore.Repositories;
 
 namespace GoalDigger.API.Controllers
 {
@@ -16,7 +16,7 @@ namespace GoalDigger.API.Controllers
   public class PostController : ControllerBase
   {
     private readonly HttpClient _http = new HttpClient();
-    private static readonly PostRepository post_repo = new PostRepository(); // DBMS hooks
+  //  private static readonly PostRepository post_repo = new PostRepository(); // DBMS hooks
     private static readonly List<PostModel> _postmodellist = new List<PostModel>()
     {
       new PostModel() { Body = "My first #goal !!!" },
