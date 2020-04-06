@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using GoalDigger.MVC.Models;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace GoalDigger.MVC.Controllers
 {
   public class HomeController : Controller
   {
+    private readonly HttpClient _http = new HttpClient();
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -30,7 +33,9 @@ namespace GoalDigger.MVC.Controllers
       //get users from db. and run login. 
 
       //on successful login, show post index page
-      return View("GetPosts");
+      var res = _http.GetAsync("http://api/Post").GetAwaiter().GetResult(); // set the post here to 4000
+      var posts = JsonConvert.DeserializeObject<List<PostViewModel>>(res.Content.ReadAsStringAsync().GetAwaiter().GetResult());
+      return View("GetPosts",posts);
     }
 
     public IActionResult Privacy()

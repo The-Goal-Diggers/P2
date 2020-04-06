@@ -66,7 +66,7 @@ namespace GoalDigger.MVC.Controllers
             {
               var res = _http.GetAsync("http://api/Post").GetAwaiter().GetResult(); // set the post here to 4000
               var posts = JsonConvert.DeserializeObject<List<PostViewModel>>(res.Content.ReadAsStringAsync().GetAwaiter().GetResult());
-              return View("Index", posts);
+              return View("GetPosts", posts);
             }
             else
             {
