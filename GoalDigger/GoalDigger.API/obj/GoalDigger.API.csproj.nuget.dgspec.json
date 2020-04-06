@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "/Users/alexander/Desktop/revature/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {}
   },
   "projects": {
@@ -16,22 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/alexander/.nuget/NuGet/NuGet.Config"
-=======
-    "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {}
-  },
-  "projects": {
-    "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
-        "projectName": "GoalDigger.API",
-        "projectPath": "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/GoalDigger.API.csproj",
-        "packagesPath": "/home/nick/.nuget/packages/",
-        "outputPath": "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.API/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/nick/.nuget/NuGet/NuGet.Config"
->>>>>>> nick2
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -55,7 +38,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Analyzers": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[3.1.3, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

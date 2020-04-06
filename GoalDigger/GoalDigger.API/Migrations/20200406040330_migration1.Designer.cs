@@ -4,14 +4,16 @@ using GoalDigger.DataStore.Databases;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GoalDigger.API.Migrations
 {
     [DbContext(typeof(GoalDiggerDBContext))]
-    partial class GoalDiggerDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200406040330_migration1")]
+    partial class migration1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

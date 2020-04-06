@@ -8,7 +8,7 @@ namespace GoalDigger.Domain.Models
     {
       // Entity Relationships
       public UserModel User { get; set; }
-      public FeedPostModel FeedPost { get; set; }
+      // public FeedPostModel FeedPost { get; set; }
       public List<MentionModel> Mentions { get; set; }
       public HashtagPostModel HashtagPost { get; set; }
       

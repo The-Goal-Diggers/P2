@@ -11,8 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 // using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-// using GoalDigger.DataStore.Databases;
-// using GoalDigger.DataStore.Repositories;
+using GoalDigger.DataStore.Databases;
+using GoalDigger.DataStore.Repositories;
 
 namespace GoalDigger.API
 {
@@ -33,6 +33,10 @@ namespace GoalDigger.API
             // //    services.AddDbContext<GoalDiggerDBContext>.UseSqlServer("main");
             // services.AddScoped<PostRepository>(); // transient vs scoped vs singleton
             // services.AddScoped<UserRepository>();
+            // services.AddScoped<GoalRepository>();
+            // services.AddScoped<MentionRepository>();
+            // services.AddScoped<HashtagPostRepository>();
+            // services.AddScoped<HashtagRepository>();
 
             services.AddControllers();
         }

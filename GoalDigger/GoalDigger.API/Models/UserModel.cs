@@ -9,8 +9,8 @@ namespace GoalDigger.Domain.Models
       // Entity relationships
       public List<GoalModel> Goals { get; set; }
       public List<PostModel> Posts { get; set; }
-      public MentionModel Mention { get; set; }
-      public FeedModel Feed { get; set; }
+      public List<MentionModel> Mentions { get; set; }
+      // public virtual FeedModel Feed { get; set; }
 
       // Class variables
       public string UserName { get; set; }
