@@ -30,7 +30,7 @@ namespace GoalDigger.MVC.Controllers
       //get users from db. and run login. 
 
       //on successful login, show post index page
-      return View("post/index/");
+      return View("GetPosts");
     }
 
     public IActionResult Privacy()

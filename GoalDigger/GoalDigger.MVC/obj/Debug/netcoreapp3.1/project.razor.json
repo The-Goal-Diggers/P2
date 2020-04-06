@@ -20521,8 +20521,8 @@
   "RootNamespace": "GoalDigger.MVC",
   "Documents": [
     {
-      "FilePath": "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.MVC/Views/Post/Index.cshtml",
-      "TargetPath": "Views\\Post\\Index.cshtml",
+      "FilePath": "/home/nick/revature_projects/p2_nick2/P2/GoalDigger/GoalDigger.MVC/Views/Shared/GetPosts.cshtml",
+      "TargetPath": "Views\\Shared\\GetPosts.cshtml",
       "FileKind": "mvc"
     },
     {
