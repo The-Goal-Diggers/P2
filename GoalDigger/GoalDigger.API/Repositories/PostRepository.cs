@@ -11,10 +11,7 @@ namespace GoalDigger.DataStore.Repositories
 {
   public class PostRepository : ARepository
   {    
-    public PostRepository()
-    {
-      // _db = dbContext;
-    }
+    public PostRepository(){}
 
     public List<PostModel> Read() 
     {

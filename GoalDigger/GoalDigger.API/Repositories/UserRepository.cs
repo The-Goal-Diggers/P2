@@ -10,13 +10,7 @@ namespace GoalDigger.DataStore.Repositories
 {
   public class UserRepository
   {
-
-    private GoalDiggerDBContext _db;
-    
-    public UserRepository(GoalDiggerDBContext dbContext)
-    {
-      _db = dbContext;
-    }
+    public UserRepository(){}
 
     public List<UserModel> Read() 
     {

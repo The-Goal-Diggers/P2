@@ -10,13 +10,7 @@ namespace GoalDigger.DataStore.Repositories
 {
   public class FeedRepository
   {
-
-    private GoalDiggerDBContext _db;
-    
-    public FeedRepository(GoalDiggerDBContext dbContext)
-    {
-      _db = dbContext;
-    }
+    public FeedRepository(){}
 
     public List<FeedModel> Read() 
     {

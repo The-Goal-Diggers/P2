@@ -9,14 +9,8 @@ using GoalDigger.DataStore.Databases;
 namespace GoalDigger.DataStore.Repositories 
 {
   public class FeedPostRepository
-  {
-
-    private GoalDiggerDBContext _db;
-    
-    public FeedPostRepository(GoalDiggerDBContext dbContext)
-    {
-      _db = dbContext;
-    }
+  {    
+    public FeedPostRepository(){}
 
     public List<FeedPostModel> Read() 
     {

@@ -10,13 +10,7 @@ namespace GoalDigger.DataStore.Repositories
 {
   public class MentionRepository
   {
-
-    private GoalDiggerDBContext _db;
-    
-    public MentionRepository(GoalDiggerDBContext dbContext)
-    {
-      _db = dbContext;
-    }
+    public MentionRepository(){}
 
     public List<MentionModel> Read() 
     {

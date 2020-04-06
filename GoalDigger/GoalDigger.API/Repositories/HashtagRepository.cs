@@ -10,13 +10,7 @@ namespace GoalDigger.DataStore.Repositories
 {
   public class HashtagRepository
   {
-
-    private GoalDiggerDBContext _db;
-    
-    public HashtagRepository(GoalDiggerDBContext dbContext)
-    {
-      _db = dbContext;
-    }
+    public HashtagRepository(){}
 
     public List<HashtagModel> Read() 
     {
