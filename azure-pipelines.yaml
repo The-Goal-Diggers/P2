@@ -91,7 +91,7 @@ stages:
               dockerComposeFile: docker-compose.yaml
               projectName: $(Build.Repository.Name)
               buildImages: false
-              detached: false
+              detached: true
 
 trigger:
   - master
