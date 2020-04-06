@@ -26,8 +26,6 @@ services:
       ConnectionStrings__main: "server=db;database=GoalDiggerDB;user id=sa;password=Password12345"
   db:
     image: "mcr.microsoft.com/mssql/server:2017-latest"
-    ports:
-      - 1433:1433
     environment:
       SA_PASSWORD: "Password12345"
       ACCEPT_EULA: "Y"
