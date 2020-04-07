@@ -3,6 +3,6 @@ namespace GoalDigger.Domain.Abstracts
 {
   public abstract class ARepository
   {
-    protected static readonly GoalDiggerDBContext _db = new GoalDiggerDBContext();
+    protected static readonly GoalDiggerDBContext _db;
   }
 }

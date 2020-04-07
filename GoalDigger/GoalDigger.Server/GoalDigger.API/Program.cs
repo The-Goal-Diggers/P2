@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using GoalDigger.DataStore.Databases;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace GoalDigger.API
 {
@@ -13,7 +16,7 @@ namespace GoalDigger.API
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            LoadDatabase(CreateHostBuilder(args).Build()).Run(); // LOAD THA DATABASE <--
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -22,5 +25,17 @@ namespace GoalDigger.API
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+    public static IHost LoadDatabase(IHost host)
+        {
+            using( var dbContext = host.Services.GetRequiredService<GoalDiggerDBContext>())
+            {
+                // dbContext.Database.EnsureCreated();
+                dbContext.Database.Migrate();
+            }
+            return host;
+            
+        }
+        
     }
 }
