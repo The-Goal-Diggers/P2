@@ -1,6 +1,10 @@
 # P2
-Revature Project 2
-Alex, Nick, Isaiah
+## Revature Project 2
+### Group Members: Alex, Nick, Isaiah
+
+## Goal Digger
+Goal Digger is a new social media app that allows people to share their goals and the progress they make towards those goals.
+
 
 https://goaldiggerapp.azurewebsites.net
 
